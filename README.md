@@ -1,6 +1,11 @@
-# my-website-v2
+# V2 of my personal website, made with Vue.js
 
 ## Project setup
+Make sure to have VueCLI
+```
+npm install -g @vue/cli
+```
+Then
 ```
 npm install
 ```
