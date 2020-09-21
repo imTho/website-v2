@@ -22,6 +22,8 @@ export default {
 body{
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 #app {
@@ -30,6 +32,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
   color: #000000;
   margin: 0;
+  padding-left: 14rem;
 }
 
 li{

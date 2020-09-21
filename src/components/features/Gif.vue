@@ -1,6 +1,8 @@
 <template>
-    <span class="highlighted" @mouseenter="showGif()" @mouseleave="enable = false">  {{name}}
-        <img v-show="enable" :class="name" :src="url" alt="">
+    <span class="highlighted" @mouseenter="showGif()" @mouseleave="visible = false">  {{name}}
+        <transition name="fade">
+            <img v-show="visible" :class="name" :src="url" alt="">
+        </transition>
     </span>
 </template>
 
@@ -8,28 +10,36 @@
     export default {
         name: 'Gif',
 
-        props: [
-            'name',
-            'url'
-        ],
+        props: {
+            name: {
+                type: String,
+                required: true,
+            },
+            url: {
+                type: String,
+            }
+        },
 
-        data:function() {
+        data() {
             return {
-                enable: false,
+                visible: false,
             };
         },
 
         methods: {
             showGif(){
-                this.enable = true;
-                window.onmousemove = function(e){
-                    let gif = document.querySelector('this.name');
-                    // if(gif.classList.contains()){
-                        gif.style.top = e.clientY + "px";
-                        gif.style.left = e.clientX + "px";
-                    // }
-                    
-                }
+                this.visible = true;
+                let gifName = this.name;
+                let gifs = document.querySelectorAll('.highlighted');
+
+                gifs.forEach(gif => {
+                    if(gif.children[0].classList.contains(gifName) && this.visible == true){
+                        window.onmousemove = function(e){
+                            gif.children[0].style.top = e.pageY + "px";
+                            gif.children[0].style.left = e.pageX + "px";
+                        }
+                    }
+                })
             }
         }
     }
@@ -43,7 +53,20 @@
 
             img{
                 position: absolute;
-                // z-index: -1;
+                pointer-events:none;
             }
+    }
+
+    // Animation transition
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .20s;
+    }
+
+    .fade-enter-to, .fade-leave {
+        opacity: 0.95;
+    }
+
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
     }
 </style>
