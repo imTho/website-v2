@@ -33,15 +33,15 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     height: 100%;
-    padding: 3.75rem 2.2rem 2.2rem 2.2rem;
+    margin-left: 2.2rem;
 }
 
 .nav-logo{ 
-    height: 8.75rem;
-    width: 8.75rem;
     position: relative;
-    margin-bottom: 2.8rem;
+    width: 5rem;
+    height: 5rem;
 
     .logo-gradient, .logo{
         width: 100%;
@@ -65,7 +65,7 @@ nav{
     font-size: 1.25rem;
 
     .nav-item{
-        margin-top: 4.2rem;
+      margin-top: 3rem;  
     }
 
     .nav-item a:hover{
@@ -77,7 +77,7 @@ nav{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 5.8rem;
+    
 
     .social-icon-container{
         margin-top: 1.56rem;
@@ -93,8 +93,8 @@ nav{
     
 
     .social-line{
-        margin-top: 2.18rem;
-        height: 6.25rem;
+        margin-top: 1.56rem;
+        height: 5rem;
         width: 0.125rem;
         background-color: black;
     }
