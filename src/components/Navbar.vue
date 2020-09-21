@@ -40,8 +40,8 @@ nav{
 
 .nav-logo{ 
     position: relative;
-    width: 5rem;
-    height: 5rem;
+    width: 7rem;
+    height: 7rem;
 
     .logo-gradient, .logo{
         width: 100%;
@@ -64,8 +64,8 @@ nav{
     writing-mode: vertical-lr;
     font-size: 1.25rem;
 
-    .nav-item{
-      margin-top: 3rem;  
+    .nav-item:nth-child(2){
+      margin-top: 5rem;  
     }
 
     .nav-item a:hover{
@@ -93,7 +93,7 @@ nav{
     
 
     .social-line{
-        margin-top: 1.56rem;
+        margin-top: 3rem;
         height: 5rem;
         width: 0.125rem;
         background-color: black;
