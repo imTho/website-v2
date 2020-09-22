@@ -1,5 +1,5 @@
 <template>
-    <span class="highlighted" @mouseenter="showGif()" @mouseleave="visible = false">  {{name}}
+    <span class="highlighted" @mouseover="showGif()" @mouseleave="visible = false">  {{name}}
         <transition name="fade">
             <img v-show="visible" :class="name" :src="url" alt="">
         </transition>
@@ -29,19 +29,13 @@
         methods: {
             showGif(){
                 this.visible = true;
-                let gifName = this.name;
-                let gifs = document.querySelectorAll('.highlighted');
-
-                gifs.forEach(gif => {
-                    if(gif.children[0].classList.contains(gifName) && this.visible == true){
-                        window.onmousemove = function(e){
-                            gif.children[0].style.top = e.pageY + "px";
-                            gif.children[0].style.left = e.pageX + "px";
-                        }
-                    }
-                })
+                let gif = this.$el.children[0];
+                window.onmousemove = function(e){
+                    gif.style.top = e.pageY + "px";
+                    gif.style.left = e.pageX + "px";
+                }  
             }
-        }
+        },
     }
 </script>
 
