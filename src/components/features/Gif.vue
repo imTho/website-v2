@@ -31,8 +31,11 @@
                 this.visible = true;
                 let gif = this.$el.children[0];
                 window.onmousemove = function(e){
-                    gif.style.top = e.pageY + "px";
-                    gif.style.left = e.pageX + "px";
+                    setTimeout(function() {
+                        gif.style.top =  'calc(' + e.pageY + 'px - 10%)'; 
+                        gif.style.left = 'calc(' + e.pageX + 'px - 10%)';
+                    },150)
+                    
                 }  
             }
         },
@@ -46,21 +49,18 @@
         text-decoration: underline;
 
             img{
+                opacity: .95;
                 position: absolute;
-                pointer-events:none;
+                pointer-events: none;
             }
     }
 
     // Animation transition
     .fade-enter-active, .fade-leave-active {
-        transition: opacity .20s;
-    }
-
-    .fade-enter-to, .fade-leave {
-        opacity: 0.95;
+        transition: opacity .20s !important;
     }
 
     .fade-enter, .fade-leave-to {
-        opacity: 0;
+        opacity: 0 !important;
     }
 </style>
