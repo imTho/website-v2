@@ -1,24 +1,29 @@
 <template>
   <div id="app">
     <Navbar/>
-    <MainContent/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
-import MainContent from './components/MainContent.vue'
+import Navbar from './components/Navbar'
 
 export default {
-  name: 'App',
   components: {
     Navbar,
-    MainContent
   }
 }
 </script>
 
 <style lang="scss">
+#app {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #000000;
+  margin: 0;
+  padding-left: 14rem;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -26,23 +31,14 @@ body{
   box-sizing: border-box;
 }
 
-#app {
-  font-family: 'Poppins', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #000000;
-  margin: 0;
-  padding-left: 14rem;
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
 li{
   list-style: none;
   text-decoration: none;
-}
-
-a{
-  text-decoration: none;
-  color: inherit;
 }
 
 //ScrollBar
