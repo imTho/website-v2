@@ -32,8 +32,8 @@
                 let gif = this.$el.children[0];
                 window.onmousemove = function(e){
                     setTimeout(function() {
-                        gif.style.top =  'calc(' + e.pageY + 'px - 10%)'; 
-                        gif.style.left = 'calc(' + e.pageX + 'px - 10%)';
+                        gif.style.top =  e.pageY + 'px'; 
+                        gif.style.left = e.pageX + 'px';
                     },150)
                     
                 }  
