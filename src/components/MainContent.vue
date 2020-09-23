@@ -22,7 +22,7 @@ export default {
         skewEffect(){
             const section = document.querySelector('section');
             let currentPos = window.pageYOffset;
-            const skewAmount = 0.4;
+            const skewAmount = 0.5;
 
             const looper = function() {
                 const newPos = window.pageYOffset;
@@ -34,7 +34,6 @@ export default {
                 
                 requestAnimationFrame(looper);
             }
-
             looper();   
         }
     },
@@ -54,6 +53,7 @@ main{
 
     section{
         transition: transform .1s;
+        // transform: skewY(0deg);
     }
 }
 </style>

@@ -32,8 +32,8 @@
                 let gif = this.$el.children[0];
                 window.onmousemove = function(e){
                     setTimeout(function() {
-                        gif.style.top =  e.pageY + 'px'; 
-                        gif.style.left = e.pageX + 'px';
+                        gif.style.top = `calc(${e.pageY}px - 110px - 10%)`; 
+                        gif.style.left = `calc(${e.pageX}px - 300px - 10%)`;
                     },150)
                     
                 }  
@@ -49,15 +49,15 @@
         text-decoration: underline;
 
             img{
-                opacity: .95;
                 position: absolute;
+                opacity: .95;
                 pointer-events: none;
             }
     }
 
     // Animation transition
     .fade-enter-active, .fade-leave-active {
-        transition: opacity .20s !important;
+        transition: opacity .5s !important;
     }
 
     .fade-enter, .fade-leave-to {
