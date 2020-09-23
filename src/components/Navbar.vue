@@ -35,7 +35,7 @@ nav{
     align-items: center;
     justify-content: space-around;
     height: 100%;
-    margin-left: 2.2rem;
+    margin-left: 2rem;
 }
 
 .nav-logo{ 
@@ -65,7 +65,7 @@ nav{
     font-size: 1.25rem;
 
     .nav-item:nth-child(2){
-      margin-top: 5rem;  
+      margin-top: 50%;  
     }
 
     .nav-item a:hover{
@@ -93,7 +93,7 @@ nav{
     
 
     .social-line{
-        margin-top: 3rem;
+        margin-top: 80%;
         height: 5rem;
         width: 0.125rem;
         background-color: black;
