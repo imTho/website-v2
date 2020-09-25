@@ -11,9 +11,9 @@
             <li class="nav-item"> <a href="#">skills</a> </li>
         </ul>
         <div class="nav-socials">
-            <div class="social-icon-container"> <a href="https://github.com/imTho" target="_blank" title="Profil GitHub"><img src="../assets/socials-media/github-brands.svg" alt="GitHub icon"></a> </div>
-            <div class="social-icon-container"> <a href="https://www.linkedin.com/in/th%C3%A9o-eschlimann/" target="_blank" title="Profil LinkedIn"><img src="../assets/socials-media/linkedin-in-brands.svg" alt="LinkedIn icon"></a> </div>
-            <div class="social-icon-container"> <a href="mailto:theo.eschlimann@gmail.com" target="_blank" title="Envoyer un mail"><img src="../assets/socials-media/envelope-solid.svg" alt="Email icon" ></a> </div>
+            <div class="social-icon-container"> <a href="https://github.com/imTho" target="_blank" title="GitHub profil"><img src="../assets/socials-media/github-brands.svg" alt="GitHub icon"></a> </div>
+            <div class="social-icon-container"> <a href="https://www.linkedin.com/in/th%C3%A9o-eschlimann/" target="_blank" title=" LinkedIn profil"><img src="../assets/socials-media/linkedin-in-brands.svg" alt="LinkedIn icon"></a> </div>
+            <div class="social-icon-container"> <a href="mailto:theo.eschlimann@gmail.com" target="_blank" title="Send mail"><img src="../assets/socials-media/envelope-solid.svg" alt="Email icon" ></a> </div>
             <div class="social-line"></div>
         </div>
     </nav>
