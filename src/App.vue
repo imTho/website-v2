@@ -16,19 +16,23 @@ export default {
 </script>
 
 <style lang="scss">
+*{
+  box-sizing: border-box;
+}
+
 #app {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #000000;
   margin: 0;
-  padding-left: 14rem;
+  padding-left: 14%;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  box-sizing: border-box;
 }
 
 a {
@@ -59,5 +63,4 @@ li {
 	background-image: 
   -webkit-gradient(linear,40% 0%, 75% 84%, from(#83d2ff), to(#0645AD), color-stop(.6,#8a68e6))
 }
-
 </style>

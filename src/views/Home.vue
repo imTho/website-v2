@@ -2,17 +2,22 @@
   <div class="home">
     <Navbar/>
     <Introduction/>
+    <Work/>
   </div>
 </template>
 
 <script>
-import Introduction from '../components/Introduction'
+import Introduction from '../components/Introduction';
+import Navbar from '../components/Navbar';
+import Work from '../components/Work';
 
 export default {
   name: 'Home',
 
   components: {
     Introduction,
+    Navbar,
+    Work
   },
 
   methods: {
