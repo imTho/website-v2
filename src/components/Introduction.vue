@@ -26,5 +26,6 @@ export default {
     line-height: 140%;
     font-weight: 700;
     margin-top: 12rem;
+    cursor: default;
 }
 </style>

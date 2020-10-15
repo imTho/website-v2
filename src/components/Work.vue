@@ -5,7 +5,7 @@
         <div class="work-wrapper">
             <div class="work-img-container">
                 <h3 class="work-title">RULANTICA</h3>
-                <img class="work-img" src="../assets/work/miniature-rulantica.jpg" alt="">
+                <img class="work-img" src="../assets/work/miniature-rulantica.jpg" alt="" data-tilt data-tilt-scale="1.05">
             </div>
             <div class="work-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada sapien in efficitur auctor. Nulla vitae ante sapien. Vestibulum nec lacus condimentum, aliquam purus sodales, porttitor elit. Etiam feugiat eget ligula vitae vehicula.
@@ -17,9 +17,23 @@
 </template>
 
 <script>
-export default {
-    name: 'Work'
+import VanillaTilt from 'vanilla-tilt';
 
+export default {
+    name: 'Work',
+
+    mounted(){
+
+    VanillaTilt.init(document.querySelectorAll(".work-img"), {
+        max: 5,
+        speed: 200
+    });
+
+    },
+
+    methods:{
+
+    }
 }
 </script>
 
@@ -50,6 +64,8 @@ export default {
             margin: 0;
             line-height: 0;
             font-size: 9vw;
+            z-index: 5;
+            cursor: default;
 
         }
 }
@@ -59,6 +75,7 @@ export default {
     padding: 5%;
     font-size: 1.35vw;
     line-height: 170%;
+    cursor: default;
 }
 
 @media (max-width: 1000px) {
