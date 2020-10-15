@@ -1,21 +1,22 @@
 <template>
     <nav>
-        <div class="nav-logo">
-            <a href="#">
-                 <img class="logo" src="../assets/logo-mask.svg" alt="logo">
-                 <img class="logo-gradient" src="../assets/logo-gradient.webp" alt="logo-gradient">
-            </a>  
-        </div>
-        <ul class="nav-items">
-            <li class="nav-item"> <a href="#">work</a> </li>
-            <li class="nav-item"> <a href="#">skills</a> </li>
-        </ul>
         <div class="nav-socials">
             <div class="social-icon-container"> <a href="https://github.com/imTho" target="_blank" title="GitHub profil"><img src="../assets/socials-media/github-brands.svg" alt="GitHub icon"></a> </div>
             <div class="social-icon-container"> <a href="https://www.linkedin.com/in/th%C3%A9o-eschlimann/" target="_blank" title=" LinkedIn profil"><img src="../assets/socials-media/linkedin-in-brands.svg" alt="LinkedIn icon"></a> </div>
             <div class="social-icon-container"> <a href="mailto:theo.eschlimann@gmail.com" target="_blank" title="Send mail"><img src="../assets/socials-media/envelope-solid.svg" alt="Email icon" ></a> </div>
-            <div class="social-line"></div>
         </div>
+
+        <div class="nav-logo">
+            <a href="#">
+                 <img class="logo" src="../assets/logo-mask2.svg" alt="logo">
+                 <img class="logo-gradient" src="../assets/logo-gradient.webp" alt="logo-gradient">
+            </a>  
+        </div>
+
+        <ul class="nav-items">
+            <li class="nav-item"> <a href="#">#works</a> </li>
+            <li class="nav-item"> <a href="#">#skills</a> </li>
+        </ul>    
     </nav>
 </template>
 
@@ -31,17 +32,17 @@ nav{
     left: 0;
     top: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 100vh;
-    margin-left: 3%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 5;
 }
 
 .nav-logo{ 
     position: relative;
-    width: 7rem;
-    height: 7rem;
+    width: 9rem;
+    height: 9rem;
 
     .logo-gradient, .logo{
         width: 100%;
@@ -58,47 +59,37 @@ nav{
 
 .nav-items{
     display: flex;
-    padding: 0;
-    margin: 0;
-    flex-direction: columns;
-    writing-mode: vertical-lr;
     font-size: 1.25rem;
-
-    .nav-item:nth-child(2){
-      margin-top: 50%;  
+    padding: 0;
+    padding-inline-start: 0px;
+    transition-duration: 0.2s;
+    
+    li{
+        margin: 1rem;
     }
 
     .nav-item a:hover{
         color: rgb(88, 88, 88);
     }
-
 }
+
 .nav-socials{
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    
+    align-items: center; 
 
     .social-icon-container{
-        margin-top: 1.56rem;
-        width: 1.56rem;
-        height: 1.56rem;  
-         
+        margin: 1rem;
     }
-    
+
+    img{
+        height: 1.7rem;
+        width: 1.7rem;
+    }
+
     .social-icon-container img:hover{
-        transform: scale(1.1);
-        transition: all 0.1s ease;
+        transform: scale(1.15);
+        transition: all 0.2s ease;
     }
-    
-
-    .social-line{
-        margin-top: 80%;
-        height: 5rem;
-        width: 0.125rem;
-        background-color: black;
-    }
-
 }
 
 </style>

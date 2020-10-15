@@ -32,8 +32,8 @@
                 let gif = this.$el.children[0];
                 window.onmousemove = function(e){
                     setTimeout(function() {
-                        gif.style.top = `calc(${e.pageY}px - 110px - 10%)`; 
-                        gif.style.left = `calc(${e.pageX}px - 300px - 10%)`;
+                        gif.style.top = `calc(${e.pageY}px - 300px)`; 
+                        gif.style.left = `calc(${e.pageX}px - 150px )`;
                     },150)
                     
                 }  
@@ -49,6 +49,7 @@
         text-decoration: underline;
 
             img{
+                width: 40vw;
                 position: absolute;
                 opacity: .95;
                 pointer-events: none;

@@ -26,7 +26,6 @@ export default {
 <style scoped lang="scss">
 #work{
     margin-top: 9rem;
-    padding: 0 5rem 0 5rem;
 }
 
 .work-wrapper{
@@ -62,7 +61,7 @@ export default {
     line-height: 170%;
 }
 
-@media (max-width: 1470px) {
+@media (max-width: 1000px) {
     .work-wrapper{
         flex-direction: column;
     }
@@ -77,6 +76,7 @@ export default {
     .work-description{
         margin-top: 2.5rem;
         width: 100%;
+        font-size: 1.2rem;
     }
 }
 
@@ -87,10 +87,6 @@ export default {
         h3{
            font-size: 7rem; 
         }
-    }
-
-    .work-description{
-        font-size: 1.2rem;
     }
 }
 </style>

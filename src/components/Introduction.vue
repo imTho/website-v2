@@ -25,6 +25,6 @@ export default {
     font-size: 7vw;
     line-height: 140%;
     font-weight: 700;
-    padding: 0 5rem 0 5rem;
+    margin-top: 12rem;
 }
 </style>

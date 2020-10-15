@@ -25,8 +25,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   color: #000000;
   margin: 0;
-  padding-left: 14%;
   box-sizing: border-box;
+  // padding: 0rem 10rem 0rem 10rem;
+  padding: 0% 8% 0% 8%;
 }
 
 body {
