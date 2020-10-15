@@ -22,7 +22,7 @@ export default {
 
   methods: {
         skewEffect(){
-            const section = document.querySelector('section');
+            const sections = document.querySelectorAll('section');
             let currentPos = window.pageYOffset;
             const skewAmount = 0.3;
 
@@ -31,8 +31,10 @@ export default {
                 const diff = newPos - currentPos;
                 const speed = diff * skewAmount;
                 
-                section.style.transform = `skewY(${speed}deg)`;
-                currentPos = newPos;
+                sections.forEach(section => {
+                  section.style.transform = `skewY(${speed}deg)`;
+                  currentPos = newPos;
+                });
                 
                 requestAnimationFrame(looper);
             }
