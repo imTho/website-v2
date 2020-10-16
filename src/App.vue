@@ -16,7 +16,8 @@ export default {
   mounted(){
     //Animation on view
     this.transitionOnView('work-description','fade-from-left');
-    this.transitionOnView('work-title','fade-from-right')
+    this.transitionOnView('work-title','fade-from-right');
+    this.transitionOnView('skills-item','fade-from-left')
   },
 
   methods:{
@@ -92,6 +93,7 @@ li {
 //ANIMATIONS
 
 .animate{
+  transition: opacity 0.3s;
   opacity: 0;
 }
 
@@ -112,7 +114,17 @@ li {
 }
 
 .fade-from-left{
-  animation: fade-left 1s;
+  animation: fade-left 1s ease;
+}
+
+//Fade from Right
+@keyframes fade-bottom {
+    from {opacity: 0; transform: translateY(25rem);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.fade-from-bottom{
+  animation: fade-bottom 1s;
 }
 
 

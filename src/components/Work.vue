@@ -57,7 +57,7 @@ export default {
 
 <style scoped lang="scss">
 #works{
-    margin-top: 20rem;
+    margin-top: 33rem;
 }
 
 h2{
@@ -74,7 +74,7 @@ h2{
 .work-wrapper{
     display: flex;
     width: 100%;
-    margin-bottom: 13rem;
+    margin-bottom: 19rem;
 }
 
 .work-img-container{

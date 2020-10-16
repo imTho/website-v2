@@ -3,6 +3,8 @@
     <Navbar/>
     <Introduction/>
     <Work/>
+    <Skills/>
+    <Footer/>
   </div>
 </template>
 
@@ -10,6 +12,8 @@
 import Introduction from '../components/Introduction';
 import Navbar from '../components/Navbar';
 import Work from '../components/Work';
+import Skills from '../components/Skills';
+import Footer from '../components/Footer';
 
 export default {
   name: 'Home',
@@ -17,7 +21,9 @@ export default {
   components: {
     Introduction,
     Navbar,
-    Work
+    Work,
+    Skills,
+    Footer
   },
 
   methods: {
