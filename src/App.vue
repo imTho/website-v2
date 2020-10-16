@@ -11,6 +11,50 @@ import Navbar from './components/Navbar'
 export default {
   components: {
     Navbar,
+  },
+
+  mounted(){
+    //Animation on view
+    this.transitionOnView('work-description','fade-from-left');
+    this.transitionOnView('work-title','fade-from-right')
+  },
+
+  methods:{
+
+    //Target must be a Class 
+    transitionOnView(target, animationName){
+      var elements;
+      var windowHeight;
+
+      function init() {
+        elements = document.getElementsByClassName(target);
+        windowHeight = window.innerHeight;
+      }
+
+      function checkPosition() {
+
+        elements.forEach(element => {
+
+          var positionFromTop = element.getBoundingClientRect().top;
+
+          if (positionFromTop - windowHeight < 0) {
+            element.classList.add(animationName);
+            element.classList.remove('animate');
+          }
+          else if (positionFromTop - windowHeight > 0) {
+            element.classList.remove(animationName);
+            element.classList.add('animate');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', checkPosition);
+      window.addEventListener('resize', init);
+
+      init();
+      checkPosition();
+    }
+
   }
 }
 </script>
@@ -26,7 +70,6 @@ export default {
   color: #000000;
   margin: 0;
   box-sizing: border-box;
-  // padding: 0rem 10rem 0rem 10rem;
   padding: 0% 8% 0% 8%;
 }
 
@@ -46,7 +89,34 @@ li {
   text-decoration: none;
 }
 
-//ScrollBar
+//ANIMATIONS
+
+.animate{
+  opacity: 0;
+}
+
+//Fade from Right
+@keyframes fade-right {
+    from {opacity: 0; transform: translate(25rem);}
+    to {opacity: 1; transform: translate(0);}
+}
+
+.fade-from-right{
+  animation: fade-right 1s;
+}
+
+//Fade from left
+@keyframes fade-left {
+    from {opacity: 0; transform: translate(-25rem);}
+    to {opacity: 1; transform: translate(0);}
+}
+
+.fade-from-left{
+  animation: fade-left 1s;
+}
+
+
+//SCROLLBAR
 ::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
 	background-color: #F5F5F5;
