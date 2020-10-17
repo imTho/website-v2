@@ -26,17 +26,22 @@
             };
         },
 
+        mounted(){
+
+        },
+
         methods: {
             showGif(){
                 this.visible = true;
                 let gif = this.$el.children[0];
-                window.onmousemove = function(e){
+
+                console.log(gif);
+                document.onmousemove = function(e){
                     setTimeout(function() {
-                        gif.style.top = `calc(${e.pageY}px - 300px)`; 
-                        gif.style.left = `calc(${e.pageX}px - 150px)`;
-                    },150)
-                    
-                }  
+                        gif.style.top = `calc(${e.pageY}px - 12rem)`; 
+                        gif.style.left = `calc(${e.pageX}px - 9%)`;
+                    },150) 
+                } 
             }
         },
     }
@@ -51,8 +56,11 @@
         img{
             width: 40vw;
             position: absolute;
+            // top: calc(0px - 12rem);
+            // left: calc(0px - 8%);
             opacity: .95;
             pointer-events: none;
+            z-index: 100;
         }
 }
 
