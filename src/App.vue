@@ -61,6 +61,10 @@ export default {
 </script>
 
 <style lang="scss">
+html{
+  scroll-behavior: smooth;
+}
+
 *{
   box-sizing: border-box;
 }

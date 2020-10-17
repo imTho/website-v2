@@ -14,15 +14,21 @@
         </div>
 
         <ul class="nav-items">
-            <li class="nav-item"> <a href="#">#works</a> </li>
-            <li class="nav-item"> <a href="#">#skills</a> </li>
-        </ul>    
+            <li class="nav-item"> <a href="#works">#works</a> </li>
+            <li class="nav-item"> <a href="#Skills">#skills</a> </li>
+        </ul>   
     </nav>
 </template>
 
 <script>
 export default {
-    name: 'Navbar'
+    name: 'Navbar',
+
+    data(){
+        return{
+            visible: true
+        }
+    }
 }
 </script>
 
@@ -41,8 +47,8 @@ nav{
 
 .nav-logo{ 
     position: relative;
-    width: 9rem;
-    height: 9rem;
+    width: 7.5rem;
+    height: 7.5rem;
 
     .logo-gradient, .logo{
         width: 100%;
@@ -92,4 +98,49 @@ nav{
     }
 }
 
+.nav-burger{
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 3.5rem;
+    height: 2.2rem;
+
+    span{
+        display: block;
+        background-color: black;
+        height: 0.35rem;
+        width: 100%;
+        border-radius: 7px;
+    }
+
+    span:nth-child(2){
+        width: 75%;
+    }
+
+    span:nth-child(3){
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 775px) {
+    nav{
+        flex-direction: column;
+    }
+
+    .nav-socials{
+        display: none;
+    }
+
+    .nav-items{
+        margin: 0;
+
+        li{
+            margin-top: 0;
+            margin-bottom: 0;
+            margin: 2vw;
+        }
+    }
+}
 </style>

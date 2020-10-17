@@ -30,44 +30,52 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+p{
+    font-size: 7vw;
+    line-height: 140%;
+    font-weight: 700;
+    margin-bottom: 10%;
+    margin-top: 25%;
+}
+
+.skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.skills-item{
+    margin: 0rem 1rem 0rem 1rem;
+    font-weight: bold;
+    color: rgba(212, 212, 212, 0.699);
+    font-size: 6vw;
+    line-height: 100%;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    background: none;
+}
+
+.skills-item:hover{
+    transform: scale(1.1);
+    background: -webkit-gradient(linear,40% 0%, 75% 84%, from(#83d2ff), to(#0645AD), color-stop(.6,#8a68e6));
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+@media (max-width: 1000px) {
     #Skills{
-        margin-top: 25rem;
+        margin-top: 7rem;
     }
+}
+
+@media (max-width: 775px) {
 
     p{
-        font-size: 7vw;
-        line-height: 140%;
-        font-weight: 700;
-        margin-bottom: 7.5rem;
+        font-size: 11vw;
     }
-
-    .skills-container{
-        display: flex;
-        flex-wrap: wrap;
-        overflow: hidden;
-    }
-
     .skills-item{
-        margin: 0rem 1rem 0rem 1rem;
-        font-weight: bold;
-        color: rgba(212, 212, 212, 0.699);
-        font-size: 6vw;
-        line-height: 100%;
-        cursor: pointer;
-        transition-duration: 0.5s;
-        background: none;
+        font-size: 7vw;
     }
-
-    .skills-item:hover{
-        transform: scale(1.1);
-        background: -webkit-gradient(linear,40% 0%, 75% 84%, from(#83d2ff), to(#0645AD), color-stop(.6,#8a68e6));
-        background-clip: text;
-        -webkit-text-fill-color: transparent; 
-    }
-
-    @media (max-width: 1000px) {
-        #Skills{
-            margin-top: 7rem;
-        }
-    }
+}
 </style>

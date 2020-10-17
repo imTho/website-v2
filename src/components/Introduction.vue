@@ -28,4 +28,10 @@ export default {
     margin-top: 12rem;
     cursor: default;
 }
+
+@media (max-width: 775px) {
+    #introduction{
+        font-size: 11vw;
+    }
+}
 </style>

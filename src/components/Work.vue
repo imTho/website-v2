@@ -8,7 +8,11 @@
                 <img class="work-img tilt" :src="'/static/work/' + work.img" :alt="work.title" data-tilt data-tilt-scale="1.05">
             </div>
             <div class="work-description animate">
-                {{work.description}}
+                <p>{{work.description}}</p>
+                <ul >
+                    <li v-for="tech in work.tech" :key="tech">#{{tech}}</li>
+                </ul>
+                
             </div>
         </div>
 
@@ -29,14 +33,33 @@ export default {
                     id : '1',
                     title: 'RULANTICA',
                     img: 'miniature-rulantica.jpg',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada sapien in efficitur auctor. Nulla vitae ante sapien. Vestibulum nec lacus condimentum, aliquam purus sodales, porttitor elit. Etiam feugiat eget ligula vitae vehicula.'
+                    description: 'Proposal mock-up of a landing page for the Rulantica theme park website. Realization of the desktop and mobile versions.',
+
+                    tech: ['ILLUSTRATOR','PHOTOSHOP']
                 },
 
                 {   
                     id : '2',
-                    title: 'AMNEVILLE',
-                    img: 'miniature-amneville.jpg',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada sapien in efficitur auctor. Nulla vitae ante sapien. Vestibulum nec lacus condimentum, aliquam purus sodales, porttitor elit. Etiam feugiat eget ligula vitae vehicula.'
+                    title: 'VACARMES',
+                    img: 'miniature-vacarmes.jpg',
+                    description: 'Website for press articles, produced in association with journalists students. Collaborative work with a team of 4 developers and 3 graphic designers.',
+                    tech: ['HTML','SCSS','JS','GIT']
+                },
+
+                {   
+                    id : '3',
+                    title: 'ORINOCO',
+                    img: 'miniature-orinico.jpg',
+                    description: 'Creation and implementation of the front-end interface for an e-commerce website. Retrieval and display of products from an API and creation of the shopping cart management system.',
+                    tech: ['HTML','SCSS','JS','GIT','API']
+                },
+
+                {   
+                    id : '4',
+                    title: 'GROUPOMANIA',
+                    img: 'miniature-groupomania.jpg',
+                    description: 'Fullstack project of a corporate social network. With the creation of a secure API and storage in a database of the various articles written by users. Creation of the front-end interface with display and modification of articles.',
+                    tech: ['VUEJS','NODEJS','EXPRESS','MYSQL','API']
                 }
             ]
         }
@@ -57,7 +80,7 @@ export default {
 
 <style scoped lang="scss">
 #works{
-    margin-top: 33rem;
+    margin-top: 30%;
 }
 
 h2{
@@ -74,7 +97,7 @@ h2{
 .work-wrapper{
     display: flex;
     width: 100%;
-    margin-bottom: 19rem;
+    margin-bottom: 15%;
 }
 
 .work-img-container{
@@ -87,10 +110,11 @@ h2{
         }
 
         h3{
+            word-wrap: wrap;
             text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.384);
             position: absolute;
             bottom: 0;
-            right: -50%;
+            padding-left: 5rem;
             margin: 0;
             line-height: 0;
             font-size: 9vw;
@@ -108,6 +132,26 @@ h2{
     line-height: 170%;
     cursor: default;
     z-index: -1;
+
+    ul{
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        display: flex;
+    }
+
+    li{
+        margin: 0;
+        margin-left: 1vw;
+        font-size: 1.35vw;
+    }
+
+    li:nth-child(1){
+        margin-left: 0;
+    }
+
+    
 }
 
 @media (max-width: 1000px) {
@@ -123,7 +167,9 @@ h2{
         width: 100%;
 
         h3{
+            padding-left: 0;
             left: 0;
+            font-size: 10vw;
         }
     }
 
@@ -131,15 +177,9 @@ h2{
         margin-top: 2.5rem;
         width: 100%;
         font-size: 1.2rem;
-    }
-}
 
-@media (max-width: 1250px) {
-
-    .work-img-container{
-
-        h3{
-           font-size: 7rem; 
+        li{
+            font-size: 1.2rem;
         }
     }
 }
