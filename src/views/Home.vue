@@ -36,7 +36,7 @@ export default {
                 const newPos = window.pageYOffset;
                 const diff = newPos - currentPos;
                 const speed = diff * skewAmount;
-                const maxSpeed = 20;
+                const maxSpeed = 12;
                 
                 sections.forEach(section => {
                   if(speed < maxSpeed){
@@ -56,7 +56,9 @@ export default {
     },
 
     mounted(){
+      if(window.innerWidth > 775){
         this.skewEffect()
+      }  
     },
 }
 </script>

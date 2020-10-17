@@ -33,7 +33,7 @@
                 window.onmousemove = function(e){
                     setTimeout(function() {
                         gif.style.top = `calc(${e.pageY}px - 300px)`; 
-                        gif.style.left = `calc(${e.pageX}px - 150px )`;
+                        gif.style.left = `calc(${e.pageX}px - 150px)`;
                     },150)
                     
                 }  
@@ -59,7 +59,6 @@
 @media (max-width: 775px) {
     .highlighted{
         img{
-            position: relative !important;
             width: 80vw !important;
         }
     }
