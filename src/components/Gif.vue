@@ -43,25 +43,34 @@
 </script>
 
 <style scoped lang="scss">
+.highlighted{
+    cursor: pointer;
+    color: #0645AD;
+    text-decoration: underline;
+
+        img{
+            width: 40vw;
+            position: absolute;
+            opacity: .95;
+            pointer-events: none;
+        }
+}
+
+@media (max-width: 775px) {
     .highlighted{
-        cursor: pointer;
-        color: #0645AD;
-        text-decoration: underline;
-
-            img{
-                width: 40vw;
-                position: absolute;
-                opacity: .95;
-                pointer-events: none;
-            }
+        img{
+            position: relative !important;
+            width: 80vw !important;
+        }
     }
+}
 
-    // Animation transition
-    .fade-enter-active, .fade-leave-active {
-        transition: opacity .5s !important;
-    }
+// Animation transition
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s !important;
+}
 
-    .fade-enter, .fade-leave-to {
-        opacity: 0 !important;
-    }
+.fade-enter, .fade-leave-to {
+    opacity: 0 !important;
+}
 </style>

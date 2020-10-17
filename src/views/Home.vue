@@ -36,10 +36,17 @@ export default {
                 const newPos = window.pageYOffset;
                 const diff = newPos - currentPos;
                 const speed = diff * skewAmount;
+                const maxSpeed = 20;
                 
                 sections.forEach(section => {
-                  section.style.transform = `skewY(${speed}deg)`;
-                  currentPos = newPos;
+                  if(speed < maxSpeed){
+                    section.style.transform = `skewY(${speed}deg)`;
+                    currentPos = newPos;
+                  }
+                  else{
+                    section.style.transform = `skewY(${maxSpeed}deg)`;
+                    currentPos = newPos;
+                  }
                 });
                 
                 requestAnimationFrame(looper);
