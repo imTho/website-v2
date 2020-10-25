@@ -34,8 +34,6 @@
             showGif(){
                 this.visible = true;
                 let gif = this.$el.children[0];
-
-                console.log(gif);
                 document.onmousemove = function(e){
                     setTimeout(function() {
                         gif.style.top = `calc(${e.pageY}px - 12rem)`; 
