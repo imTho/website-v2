@@ -30,13 +30,14 @@ export default {
         skewEffect(){
             const sections = document.querySelectorAll('section');
             let currentPos = window.pageYOffset;
-            const skewAmount = 0.115;
+            const skewAmount = 0.2;
+            const maxSpeed = 5;
 
             const looper = function() {
                 const newPos = window.pageYOffset;
                 const diff = newPos - currentPos;
                 let speed = diff * skewAmount;
-                const maxSpeed = 10;
+                
                 
                 sections.forEach(section => {
                   if(speed < maxSpeed){
