@@ -5,7 +5,9 @@
         <div class="work-wrapper" v-for="work in works" :key="work.id">
             <div class="work-img-container">
                 <h3 class="work-title animate">{{work.title}}</h3>
-                <img class="work-img tilt" :src="'/static/work/' + work.img" :alt="work.title" data-tilt data-tilt-scale="1.05">
+                <a :href="work.link" target="_blank">
+                    <img class="work-img tilt" :src="'/static/work/' + work.img" :alt="work.title" data-tilt data-tilt-scale="1.05">
+                </a>
             </div>
             <div class="work-description animate">
                 <p>{{work.description}}</p>
@@ -31,11 +33,11 @@ export default {
             works: [
                 {   
                     id : '1',
-                    title: 'RULANTICA',
-                    img: 'miniature-rulantica.jpg',
-                    description: 'Proposal mock-up of a landing page for the Rulantica theme park website. Realization of the desktop and mobile versions.',
-
-                    tech: ['ILLUSTRATOR','PHOTOSHOP']
+                    title: 'GROUPOMANIA',
+                    img: 'miniature-groupomania.jpg',
+                    description: 'Fullstack project of a corporate social network. With the creation of a secure API and storage in a database of the various articles written by users. Creation of the front-end interface with display and modification of articles.',
+                    tech: ['VUEJS','NODEJS','EXPRESS','MYSQL','API'],
+                    link:'https://github.com/imTho/Projet07-Groupomania'
                 },
 
                 {   
@@ -43,7 +45,8 @@ export default {
                     title: 'VACARMES',
                     img: 'miniature-vacarmes.jpg',
                     description: 'Website for press articles, produced in association with journalists students. Collaborative work with a team of 4 developers and 3 graphic designers.',
-                    tech: ['HTML','SCSS','JS','GIT']
+                    tech: ['HTML','SCSS','JS','GIT'],
+                    link: 'http://cuej.info/mini-sites/armes/menu.html'
                 },
 
                 {   
@@ -51,16 +54,19 @@ export default {
                     title: 'ORINOCO',
                     img: 'miniature-orinico.jpg',
                     description: 'Creation and implementation of the front-end interface for an e-commerce website. Retrieval and display of products from an API and creation of the shopping cart management system.',
-                    tech: ['HTML','SCSS','JS','GIT','API']
+                    tech: ['HTML','SCSS','JS','GIT','API'],
+                    link: 'https://github.com/imTho/Projet05-Orinoco'
                 },
 
                 {   
                     id : '4',
-                    title: 'GROUPOMANIA',
-                    img: 'miniature-groupomania.jpg',
-                    description: 'Fullstack project of a corporate social network. With the creation of a secure API and storage in a database of the various articles written by users. Creation of the front-end interface with display and modification of articles.',
-                    tech: ['VUEJS','NODEJS','EXPRESS','MYSQL','API']
-                }
+                    title: 'RULANTICA',
+                    img: 'miniature-rulantica.jpg',
+                    description: 'Proposal mock-up of a landing page for the Rulantica theme park website. Realization of the desktop and mobile versions.',
+                    tech: ['ILLUSTRATOR','PHOTOSHOP']
+                },
+
+                
             ]
         }
     },

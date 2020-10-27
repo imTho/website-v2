@@ -42,13 +42,13 @@ nav{
     justify-content: space-around;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
-    z-index: 50;
+    z-index: 100;
 }
 
 .nav-logo{ 
     position: relative;
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 7rem;
+    height: 7rem;
 
     .logo-gradient, .logo{
         width: 100%;
@@ -65,7 +65,7 @@ nav{
 
 .nav-items{
     display: flex;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     padding: 0;
     padding-inline-start: 0px;
     transition-duration: 0.2s;
@@ -88,8 +88,8 @@ nav{
     }
 
     img{
-        height: 1.7rem;
-        width: 1.7rem;
+        height: 1.4rem;
+        width: 1.4rem;
     }
 
     .social-icon-container img:hover{
@@ -98,35 +98,14 @@ nav{
     }
 }
 
-.nav-burger{
-    display: none;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    width: 3.5rem;
-    height: 2.2rem;
-
-    span{
-        display: block;
-        background-color: black;
-        height: 0.35rem;
-        width: 100%;
-        border-radius: 7px;
-    }
-
-    span:nth-child(2){
-        width: 75%;
-    }
-
-    span:nth-child(3){
-        width: 50%;
-    }
-
-}
-
 @media (max-width: 775px) {
     nav{
         flex-direction: column;
+    }
+
+    .nav-logo{
+        height: 5rem;
+        width: 5rem;
     }
 
     .nav-socials{
@@ -134,12 +113,12 @@ nav{
     }
 
     .nav-items{
+        font-size: 1rem;
+        margin-top: 0;
         margin: 0;
 
         li{
-            margin-top: 0;
-            margin-bottom: 0;
-            margin: 2vw;
+            margin: 0vw 2vw 2vw 0vw; 
         }
     }
 }
