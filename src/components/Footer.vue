@@ -29,7 +29,7 @@ export default {
         display: flex;
         justify-content: space-between;
         margin-top: 13rem;
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
 
     .footer-line{

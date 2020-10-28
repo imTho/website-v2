@@ -96,7 +96,7 @@ h2{
     margin: 0;
     line-height: 0;
     color: rgba(243, 243, 243, 0.582);
-    font-size: 20vw;
+    font-size: 17vw;
     z-index: -50;
 }
 
@@ -123,7 +123,7 @@ h2{
             padding-left: 5rem;
             margin: 0;
             line-height: 0;
-            font-size: 9vw;
+            font-size: 7vw;
             z-index: 5;
             pointer-events: none;
             cursor: default;
@@ -132,9 +132,13 @@ h2{
 }
 
 .work-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 50%;
     padding: 5%;
-    font-size: 1.35vw;
+    // font-size: 1vw;
+    font-size: 1.2rem;
     line-height: 170%;
     cursor: default;
     z-index: -1;
@@ -150,7 +154,7 @@ h2{
     li{
         margin: 0;
         margin-left: 1vw;
-        font-size: 1.35vw;
+        font-size: 1vw;
     }
 
     li:nth-child(1){
@@ -180,7 +184,7 @@ h2{
     }
 
     .work-description{
-        margin-top: 2.5rem;
+        margin-top: 5%;
         width: 100%;
         font-size: 1.2rem;
 

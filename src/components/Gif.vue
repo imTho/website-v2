@@ -37,7 +37,7 @@
                 document.onmousemove = function(e){
                     setTimeout(function() {
                         gif.style.top = `calc(${e.pageY}px - 12rem)`; 
-                        gif.style.left = `calc(${e.pageX}px - 9%)`;
+                        gif.style.left = `calc(${e.pageX}px - 20%)`;
                     },150) 
                 } 
             }

@@ -4,19 +4,19 @@
         <p>All my works are made with 💙 and :</p>
             <div class="skills-container">
                 <span class="skills-item animate">#HTML</span>
-                <span class="skills-item animate">#CSS</span>
+                <span class="skills-item animate">#SCSS</span>
                 <span class="skills-item animate">#JS</span>
-                <span class="skills-item animate">#SASS</span>
                 <span class="skills-item animate">#GIT</span>
                 <span class="skills-item animate">#NPM</span>
                 <span class="skills-item animate">#VUE.JS</span>
+                <span class="skills-item animate">#REACT</span>
                 <span class="skills-item animate">#NODE.JS</span>
                 <span class="skills-item animate">#EXPRESS</span>
                 <span class="skills-item animate">#MONGODB</span>
                 <span class="skills-item animate">#MYSQL</span>
                 <span class="skills-item animate">#PHOTOSHOP</span>
                 <span class="skills-item animate">#XD</span>
-                <span class="skills-item animate">#ILLUSTRATOR</span>
+                <span class="skills-item animate">#AI</span>
                 <span class="skills-item animate">#FIGMA</span>
             </div>
         </section>
@@ -32,11 +32,11 @@ export default {
 <style scoped lang="scss">
 
 p{
-    font-size: 7vw;
+    font-size: 6vw;
     line-height: 140%;
     font-weight: 700;
     margin-bottom: 10%;
-    margin-top: 25%;
+    margin-top: 20%;
 }
 
 .skills-container{
@@ -49,7 +49,7 @@ p{
     margin: 0rem 1rem 0rem 1rem;
     font-weight: bold;
     color: rgba(212, 212, 212, 0.699);
-    font-size: 6vw;
+    font-size: 4.5vw;
     line-height: 100%;
     cursor: pointer;
     transition-duration: 0.5s;
@@ -73,9 +73,10 @@ p{
 
     p{
         font-size: 11vw;
+        margin-bottom: 5rem;
     }
     .skills-item{
-        font-size: 7vw;
+        font-size: 8vw;
     }
 }
 </style>

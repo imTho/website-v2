@@ -75,7 +75,7 @@ html{
   color: #000000;
   margin: 0;
   box-sizing: border-box;
-  padding: 0% 8% 0% 8%;
+  padding: 0% 15% 0% 15%;
 }
 
 body {
